@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('budget_actual_data', function (Blueprint $table) {
+            $table->id();
+            $table->string("financial_indicator");
+            $table->string("division");
+            $table->string("department");
+            $table->string("actual_month");
+            $table->string("date_uploaded");
+            $table->string("mtd");
+            $table->string("budget_mtd");
+            $table->string("balance");
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('budget_actual_data');
+    }
+};
