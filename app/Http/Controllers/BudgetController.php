@@ -14,8 +14,14 @@ class BudgetController extends Controller
     public function importView(Request $request)
     {
         $budgets = Budget::all();
+        $totalMTD = $budgets->sum('mtd');
+        $totalBudgetMTD = $budgets->sum('budget_mtd');
+        $totalBalance = $budgets->sum('balance');
         return view('importFile', [
-            'budgets'=> $budgets
+            'budgets'=> $budgets,
+            'totalMTD' => $totalMTD,
+            'totalBudgetMTD' => $totalBudgetMTD,
+            'totalBalance' => $totalBalance
         ]);
     }
 
