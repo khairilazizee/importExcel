@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\ImportBudget;
-use App\Exports\ExportBudget;
 use App\Models\Budget;
+use Illuminate\Http\Request;
+use App\Exports\ExportBudget;
+use App\Imports\ImportBudget;
+use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BudgetController extends Controller
 {
     public function importView(Request $request)
     {
-        return view('importFile');
+        $budgets = Budget::all();
+        return view('importFile', [
+            'budgets'=> $budgets
+        ]);
     }
 
     public function import(Request $request)
