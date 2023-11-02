@@ -19,7 +19,7 @@ class ImportBudget implements ToModel
             'division' => $row[1],
             'department' => $row[2],
             'actual_month' => $row[3],
-            'date_uploaded' => $row[4],
+            'date_uploaded' => date("Y-m-d", strtotime($row[4])),
             'mtd' => $row[5],
             'budget_mtd' => $row[6],
             'balance' => $row[7]

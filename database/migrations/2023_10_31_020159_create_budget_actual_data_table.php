@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string("division");
             $table->string("department");
             $table->string("actual_month");
-            $table->string("date_uploaded");
-            $table->string("mtd");
-            $table->string("budget_mtd");
-            $table->string("balance");
+            $table->date("date_uploaded");
+            $table->float("mtd");
+            $table->float("budget_mtd");
+            $table->float("balance");
             $table->timestamps();
         });
     }
