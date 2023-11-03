@@ -23,6 +23,8 @@ return new class extends Migration
             $table->float("mtd");
             $table->float("budget_mtd");
             $table->float("balance");
+            $table->foreignId('users_id');
+            $table->foreign('users_id')->references('id')->on('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }

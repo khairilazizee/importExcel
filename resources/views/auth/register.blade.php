@@ -4,10 +4,15 @@
     <div class="min-h-screen bg-gray-100 flex flex-col justify-center sm:py-12">
         <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
             <h1 class="font-bold text-center text-2xl mb-5">Register</h1>
-            <form method="POST" action={{ route('login.process') }}>
+            <form method="POST" action={{ route('register.process') }}>
                 @csrf
                 <div class="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
                     <div class="px-5 py-7">
+                        <div>
+                            <label class="font-semibold text-sm text-gray-600 pb-1 block">Name</label>
+                            <input type="text" name="name"
+                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+                        </div>
                         <div>
                             <label class="font-semibold text-sm text-gray-600 pb-1 block">E-mail</label>
                             <input type="email" name="email"
@@ -20,7 +25,7 @@
                         </div>
                         <div>
                             <label class="font-semibold text-sm text-gray-600 pb-1 block">Password</label>
-                            <input type="password" name="confirm_password"
+                            <input type="password" name="password_confirmation"
                                 class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
                         </div>
                         <button type="submit"

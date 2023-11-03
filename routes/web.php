@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/login', [LoginController::class, 'loginView']);
-Route::post('/userLogin', [LoginController::class, 'loginProcess'])->name('login.process');
+Route::post('/login', [LoginController::class, 'loginProcess'])->name('login.process');
 
 Route::get('/register', [RegisterController::class, 'registerView']);
+Route::post('/register', [RegisterController::class, 'registerProcess'])->name('register.process');
 
 Route::get('/import-file', [BudgetController::class, 'importView'])->name('import-view');
 Route::post('/import', [BudgetController::class, 'import'])->name('import');
