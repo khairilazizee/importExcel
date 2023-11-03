@@ -11,22 +11,34 @@
                         <div>
                             <label class="font-semibold text-sm text-gray-600 pb-1 block">Name</label>
                             <input type="text" name="name"
-                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full @error('name') border-red-400 @enderror" />
+                                @error('name')
+                                    <div class="text-red-500 font-semibold mb-2">{{ $message  }}</div>
+                                @enderror
                         </div>
                         <div>
                             <label class="font-semibold text-sm text-gray-600 pb-1 block">E-mail</label>
                             <input type="email" name="email"
-                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full @error('name') border-red-400 @enderror" />
+                                @error('email')
+                                    <div class="text-red-500 font-semibold mb-2">{{ $message  }}</div>
+                                @enderror
                         </div>
                         <div>
                             <label class="font-semibold text-sm text-gray-600 pb-1 block">Password</label>
                             <input type="password" name="password"
-                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full @error('name') border-red-400 @enderror" />
+                                @error('password')
+                                    <div class="text-red-500 font-semibold mb-2">{{ $message  }}</div>
+                                @enderror
                         </div>
                         <div>
                             <label class="font-semibold text-sm text-gray-600 pb-1 block">Password</label>
                             <input type="password" name="password_confirmation"
-                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
+                                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full @error('name') border-red-400 @enderror" />
+                                @error('password_confirmation')
+                                    <div class="text-red-500 font-semibold mb-2">{{ $message  }}</div>
+                                @enderror
                         </div>
                         <button type="submit"
                             class="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block">
