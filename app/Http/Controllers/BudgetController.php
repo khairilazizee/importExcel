@@ -18,10 +18,11 @@ class BudgetController extends Controller
         $totalBudgetMTD = $budgets->sum('budget_mtd');
         $totalBalance = $budgets->sum('balance');
         return view('importFile', [
-            'budgets'=> $budgets,
+            'budgets' => $budgets,
             'totalMTD' => $totalMTD,
             'totalBudgetMTD' => $totalBudgetMTD,
-            'totalBalance' => $totalBalance
+            'totalBalance' => $totalBalance,
+            'pageTitle' => 'File Import'
         ]);
     }
 
