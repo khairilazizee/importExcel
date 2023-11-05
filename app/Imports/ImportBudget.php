@@ -14,6 +14,7 @@ class ImportBudget implements ToModel
      */
     public function model(array $row)
     {
+        $user = auth()->user();
         return new Budget([
             'financial_indicator' => $row[0],
             'division' => $row[1],
@@ -22,7 +23,8 @@ class ImportBudget implements ToModel
             'date_uploaded' => date("Y-m-d", strtotime($row[4])),
             'mtd' => $row[5],
             'budget_mtd' => $row[6],
-            'balance' => $row[7]
+            'balance' => $row[7],
+            'users_id' => $user->id,
         ]);
     }
 }

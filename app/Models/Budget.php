@@ -19,6 +19,7 @@ class Budget extends Model
         'date_uploaded',
         'mtd',
         'budget_mtd',
-        'balance'
+        'balance',
+        'users_id'
     ];
 }
