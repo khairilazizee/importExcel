@@ -5,7 +5,9 @@
             <div>
                 <a href="/import-file" class="hover:text-blue-500 hover:font-semibold">Import</a>
             </div>
-            <div>Logout</div>
+            <div>
+                <a href="/logout" class="hover:text-blue-500 hover:font-semibold">Logout</a>
+            </div>
         </div>
     </div>
 </div>
