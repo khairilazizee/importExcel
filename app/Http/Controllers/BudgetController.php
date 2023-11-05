@@ -13,7 +13,7 @@ class BudgetController extends Controller
 {
     public function importView(Request $request)
     {
-        $budgets = Budget::all();
+        $budgets = Budget::where('users_id', auth()->user()->id)->get();
         $totalMTD = $budgets->sum('mtd');
         $totalBudgetMTD = $budgets->sum('budget_mtd');
         $totalBalance = $budgets->sum('balance');
