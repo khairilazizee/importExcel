@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string("department");
             $table->string("actual_month");
             $table->date("date_uploaded");
-            $table->float("mtd");
-            $table->float("budget_mtd");
-            $table->float("balance");
+            $table->string("mtd");
+            $table->string("budget_mtd");
+            $table->string("balance");
             $table->foreignId('users_id');
             $table->foreign('users_id')->references('id')->on('users')->cascadeOnDelete();
             $table->timestamps();

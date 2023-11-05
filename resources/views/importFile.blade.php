@@ -44,12 +44,12 @@
                         </tr>
                     @endforeach
 
-                    <tr class="text-center">
+                    {{-- <tr class="text-center">
                         <td colspan="5"><strong>Total</strong></td>
                         <td class="font-bold border-t-2 border-black">{{ number_format($totalMTD, 2) }}</td>
                         <td class="font-bold border-t-2 border-black">{{ number_format($totalBudgetMTD, 2) }}</td>
                         <td class="font-bold border-t-2 border-black">{{ number_format($totalBalance, 2) }}</td>
-                    </tr>
+                    </tr> --}}
                 </tbody>
             </table>
         </div>

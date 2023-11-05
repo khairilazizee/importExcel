@@ -17,12 +17,13 @@ class RegisterController extends Controller
     }
 
     public function registerProcess(RegisterRequest $request)
-    {   
+    {
         // dd('fuck you');
         $users = User::create([
             'name' => trim($request->name),
             'email' => strtolower($request->email),
-            'password'=> Hash::make($request->password)
+            'password' => Hash::make($request->password),
+            'company_name' => trim($request->company_name)
         ]);
         // auth()->login($user);
 
