@@ -20,13 +20,13 @@ return new class extends Migration
             $table->string('business_partner');
             $table->string('business_partner_name');
             $table->string('estimated_revenue');
-            $table->string('budget_amount');
-            $table->string('estimate_profit');
-            $table->string('line_amount_po');
-            $table->string('line_amount_pin');
-            $table->string('balance_to_utilize');
-            $table->string('balance_actual');
-            $table->string('balance_utilize');
+            $table->string('budget_amount')->default(0);
+            $table->string('estimate_profit')->default(0);
+            $table->string('line_amount_po')->default(0);
+            $table->string('line_amount_pin')->default(0);
+            $table->string('balance_to_utilize')->default(0);
+            $table->string('balance_actual')->default(0);
+            $table->string('balance_utilize')->default(0);
             $table->timestamps();
         });
     }

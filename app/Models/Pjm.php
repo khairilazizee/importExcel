@@ -23,6 +23,7 @@ class Pjm extends Model
         "line_amount_pin",
         "balance_to_utilize",
         "balance_actual",
-        "balance_utilize"
+        "balance_utilize",
+        "users_id"
     ];
 }
