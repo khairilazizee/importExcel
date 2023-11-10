@@ -3,6 +3,7 @@
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PjmController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,8 @@ Route::post('/register', [RegisterController::class, 'registerProcess'])->name('
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/import-pjm', [PjmController::class, 'importViewPJM'])->name('import-pjm');
+    Route::post('/import-pjm', [PjmController::class, 'import'])->name('importpjm');
     Route::get('/import-file', [BudgetController::class, 'importView'])->name('import-view');
     Route::post('/import', [BudgetController::class, 'import'])->name('import');
     Route::get('/export-budget', [BudgetController::class, 'exportBudget'])->name('export-budgets');

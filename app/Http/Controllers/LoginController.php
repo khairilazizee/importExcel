@@ -21,7 +21,7 @@ class LoginController extends Controller
     {
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->intended('/import-file'); // Redirect to the page intended on successful login
+            return redirect()->intended('/import-pjm'); // Redirect to the page intended on successful login
         }
 
         return redirect("login")->with('failed', 'Login details are not valid');
