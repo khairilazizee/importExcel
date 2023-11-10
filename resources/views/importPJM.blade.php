@@ -5,7 +5,7 @@
     <body>
         @include('navigation')
         <div class="mx-auto flex justify-center bg-gray-100 max-w-6xl p-10">
-            <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('importpjm') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group mb-4">
                     <div class="custom-file text-left">
@@ -16,7 +16,7 @@
             </form>
         </div>
 
-        <div class="flex mx-auto justify-center py-20 max-w-6xl">
+        <div class="flex mx-auto justify-center py-20 max-w-[90%] ">
             <table class="table w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
@@ -35,7 +35,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($budgets as $budget)
+                    @foreach ($pjms as $budget)
                         <tr>
                             <td>{{ $budget->company }}</td>
                             <td>{{ $budget->project }}</td>
