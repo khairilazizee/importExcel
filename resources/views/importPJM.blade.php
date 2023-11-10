@@ -47,8 +47,8 @@
                             <td>{{ $budget->line_amount_po }}</td>
                             <td>{{ $budget->line_amount_pin }}</td>
                             <td>{{ $budget->balance_to_utilize }}</td>
-                            <td>{{ $budget->balace_actual }}</td>
-                            <td>{{ $budget->balace_utilize }}</td>
+                            <td>{{ $budget->balance_actual }}</td>
+                            <td>{{ $budget->balance_utilize }}</td>
                         </tr>
                     @endforeach
 
