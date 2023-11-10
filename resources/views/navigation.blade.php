@@ -3,8 +3,14 @@
         <div>Home</div>
         <div class="flex gap-4">
             <div>
+                <a href="/import-pjm"
+                    class="hover:text-blue-500 hover:font-semibold {{ request()->segment(1) == 'import-pjm' ? 'text-blue-500' : '' }}">Import
+                    PJM</a>
+            </div>
+            <div>
                 <a href="/import-file"
-                    class="hover:text-blue-500 hover:font-semibold {{ request()->segment(1) == 'import-file' ? 'text-blue-500' : '' }}">Import</a>
+                    class="hover:text-blue-500 hover:font-semibold {{ request()->segment(1) == 'import-file' ? 'text-blue-500' : '' }}">Import
+                    Budget</a>
             </div>
             <div>
                 <a href="/logout" class="hover:text-blue-500 hover:font-semibold">Logout</a>
